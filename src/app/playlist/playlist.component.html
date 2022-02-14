@@ -1,0 +1,18 @@
+
+<ng-container *ngIf="playlist$ | async as playlists">
+  <ng-container *ngIf="playlists.featuredPlaylists.content.length === 0">
+    <p>No playlist currently</p>
+  </ng-container>
+  <mat-list>
+    <div mat-subheader>Today's Playlist</div>
+    <mat-list-item *ngFor="let playlist of playlists.featuredPlaylists.content">
+      <div mat-line>{{playlist.id}}</div>
+      <div mat-line> {{playlist.kind}} </div>
+      <div mat-line> {{playlist.name}} </div>
+      <div mat-line> {{playlist.url}} </div>
+      <div mat-line> {{playlist.curator_name}} </div>
+      <img mat-line [src]="playlist.artwork" width="100px" width="100px" />
+    </mat-list-item>
+    <mat-divider></mat-divider>
+  </mat-list>
+</ng-container>
