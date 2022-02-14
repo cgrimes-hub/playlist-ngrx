@@ -1,5 +1,5 @@
-import { createFeatureSelector, createSelector } from "@ngrx/store";
-import * as fromPlaylist from "./playlist.reducer";
+import { createFeatureSelector, createSelector } from '@ngrx/store';
+import * as fromPlaylist from './playlist.reducer';
 
 export const getPlaylistState = createFeatureSelector<fromPlaylist.State>(
   fromPlaylist.playlistFeatureKey

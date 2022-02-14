@@ -1,6 +1,6 @@
-import { playlistSuccess, playlistError } from "./playlist.actions";
-import { on, createReducer, Action } from "@ngrx/store";
-import { FeaturedPlaylist } from "../playlist.model";
+import { playlistSuccess, playlistError } from './playlist.actions';
+import { on, createReducer, Action } from '@ngrx/store';
+import { FeaturedPlaylist } from '../playlist.model';
 
 export interface State {
   playlist: FeaturedPlaylist | null;
@@ -9,7 +9,7 @@ export interface State {
 
 export const initialState: State = {
   playlist: null,
-  error: "",
+  error: '',
 };
 
 export const playlistReducer = createReducer(
@@ -24,7 +24,7 @@ export const playlistReducer = createReducer(
   }))
 );
 
-export const playlistFeatureKey = "playlist";
+export const playlistFeatureKey = 'playlist';
 
 export function reducer(state: State | undefined, action: Action) {
   return playlistReducer(state, action);
